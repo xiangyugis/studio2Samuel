@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Studio Week 2</title>
+    <!-- Add Mapbox GL JS JavaScript file -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+    <!-- Add in the Mapbox GL JS CSS file -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+    <!-- Add styling info for the map -->
+	    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+          font: Futura BT;
+           background-color: #FAFAFA;
+       }
+       #headerImg{
+      overflow: hidden;
+			background-image: url(marcus-dall-col-HYJVNzJp_qk-unsplash.jpg);
+			width: 100%;
+			height: 300px;
+      top: 0;
+       }
+
+       h1{
+         text-align: center;
+         font-family: Futura;
+         color: #F8FAFB;
+       }
+       h3{
+         padding-left: 1em;
+         text-align: left;
+         font-family: Futura;
+         color:#847B71;
+       }
+       .wrapper {
+         text-align: center;
+           }
+       .wrapper ul {
+         display: inline-block;
+         margin: 0;
+         padding: 0;
+         zoom:1;
+         *display: inline;
+           }
+       .wrapper li {
+         float: left;
+           }
+        #contentMain{
+         display: flex;
+
+        }
+         #mapId {
+           width: 50%;
+           height: 600px;
+           margin-left:auto;
+           margin-right:auto;
+         }
+          #description {
+            float: right;
+            flex-basis: 50%;
+            background-color: #FAFAFA;
+          }
+          #descriptionImg{
+            text-align: center;
+          }
+          #wcsLogo{
+            width: 20%;
+            float: center;
+          }
+    </style>
+    <!-- Adding styling info for page layout by reading in a CSS file -->
+
+</head>
+
+<body>
+	<div id="headerImg">
+	  <h1>Studio Week 2 <br> Custom Style with Mapbox GL JS </h1>
+  <!-- Add multiple pages to web page-->
+  <!-- active class displays the grey box around current page-->
+<div class="wrapper">
+  <ul>
+  	<li><a href="index.html" target="_self">Output 1</a></li>
+    <li><a href="Mapbox-gl-js-cwm.html" target="_self">Output 2</a></li>
+    <li><a href="Mapbox-gl-js-ct.html" target="_self">Output 3</a></li>
+    <li><a class="active" href="Mapbox-gl-js-bm.html" target="_self">Output 4</a></li>
+  </ul>
+</div>
+</div>
+
+<div id="contentMain">
+    <!-- Container for the map -->
+    <div id="mapId"></div>
+    <div id="description">
+      <h3>About this Map:<br></h3>
+      <p id="descriptionImg">
+        <img id="wcsLogo" src="wcs-logo-png-transparent.png" alt=""/><br>
+      </p>
+      <p>
+        This map design is inspired by the Wildlife Conservation Society Organization. <br> The color choices are made based on the Logo and this page. 
+      </p>
+    </div>
+</div>
+    <script>
+    // Set your Mapbox access token
+    mapboxgl.accessToken = "pk.eyJ1IjoieGlhbmd5dWdpcyIsImEiOiJja2ZlaHV0c2QwNTNlMnRuYjRjbTYxeXFtIn0.cGUreWEZThxryiB2ppiCgw";
+
+    /* The map variable stores a new mapbox gl map.
+    * map's center set to [-122.467, 37.798] with zoom 13.
+    * Set the style URL to your custom style
+    * Update the style with your custom style's Style URL.
+    * See the Style URL'S reference for more info: https://docs.mapbox.com/help/glossary/style-url/
+    */
+    var map = new mapboxgl.Map({
+    center: [-122.3321, 47.6062],
+    zoom: 9,
+    style: "mapbox://styles/xiangyugis/ckgbz1grf4fy619r29k1ppqxq",
+    container: "mapId"
+    });
+
+    </script>
+
+</body>
+
+</html>
