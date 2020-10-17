@@ -2,17 +2,21 @@ ul {
   margin: 1px;
  list-style-type: none;
  overflow: hidden;
- background-color: white;
+ background-color: #B1976F;
+ font-family: "Futura BT", Helvetica, Arial, sans-serif;
+ color: #FAFAFA;
 }
 
 li {
  float: left;
  border-right: 2px solid white;
+ font-family: "Futura BT", Helvetica, Arial, sans-serif;
 }
 
 /* Add a border to all( but not the last) list items */
 li:last-child {
  border-right: none;
+ font-family: "Futura BT", Helvetica, Arial, sans-serif;
 }
 
 li a {
@@ -21,13 +25,17 @@ li a {
  text-align: left;
  padding: 15px 17px;
  text-decoration: none;
+ font-family: "Futura BT", Helvetica, Arial, sans-serif;
+ color: #FAFAFA;
 }
 
 /* Links will change color when hovered over */
 li a:hover {
- background-color: #a09f9f;
+ background-color: #D5363B;
+ font-family: "Futura BT", Helvetica, Arial, sans-serif;
 }
 
 .active {
- background-color: #a09f9f;
+ background-color: #D5363B;
+ font-family: "Futura BT", Helvetica, Arial, sans-serif;
 }
